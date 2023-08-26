@@ -1,0 +1,1207 @@
+:root {
+    --main-bgcolor: #383844;
+    --secondary-color: #8B8B8B;
+    --main-color: #2D2D3A;
+    --white-color: #fff;
+    --brown-color: #E7BD69;
+    --transition-effect: all .4s ease-in-out;
+
+    /*
+       fonts
+    */
+    --font-family-bold: "IBM Plex Sans Arabic Bold";
+    --font-family-regular: "IBM Plex Sans Arabic Regular";
+    --fonts-path: "../fonts";
+}
+
+/*
+     Fonts
+ */
+@font-face {
+    font-family: 'IBM Plex Sans Arabic Bold';
+    src: url('../fonts/bold/IBMPlexSansArabic-Bold.eot');
+    src: url('../fonts/bold/IBMPlexSansArabic-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/bold/IBMPlexSansArabic-Bold.woff2') format('woff2'),
+        url('../fonts/bold/IBMPlexSansArabic-Bold.woff') format('woff'),
+        url('../fonts/bold/IBMPlexSansArabic-Bold.ttf') format('truetype'),
+        url('../fonts/bold/IBMPlexSansArabic-Bold.svg#AJannatLT-Bold') format('svg');
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans Arabic Regular';
+    src: url('../fonts/regular/IBMPlexSansArabic-Regular.eot');
+    src: url('../fonts/regular/IBMPlexSansArabic-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/regular/IBMPlexSansArabic-Regular.woff2') format('woff2'),
+        url('../fonts/regular/IBMPlexSansArabic-Regular.woff') format('woff'),
+        url('../fonts/regular/IBMPlexSansArabic-Regular.ttf') format('truetype'),
+        url('../fonts/regular/IBMPlexSansArabic-Regular.svg#AJannatLT-Bold') format('svg');
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: var(--font-family-regular), 'serif';
+    color: #282828;
+    font-size: 16px;
+    direction: ltr;
+    line-height: 1.5;
+    background: var(--main-color);
+    text-align: left;
+    background: var(--white-color);
+}
+
+a {
+    transition: 0.2s linear;
+    -webkit-transition: 0.2s linear;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.extra-border {
+    border: 3px solid !important;
+}
+
+.w-105 {
+    width: 105px !important;
+}
+
+button:focus {
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'IBM Plex Sans Arabic Bold', 'serif';
+}
+
+.mt-70 {
+    margin-top: 70px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.gray-border {
+    border-color: #ddd !important;
+}
+
+/*start header section*/
+.main-header {
+    background-image: url(../imgs/bg-main.png);
+    height: 650px;
+    background-position: center;
+    /* background-attachment: fixed; */
+    background-size: cover;
+}
+
+.main-menu {
+    background-color: var(--main-bgcolor);
+    border-radius: 40px;
+    margin-top: 40px;
+    padding: 0;
+    height: 75px;
+}
+
+.main-menu nav {
+    padding: 0;
+}
+
+.main-menu .navbar-nav {
+    padding-left: 4px;
+    margin-top: 10px;
+}
+
+.main-menu nav ul li a.active {
+
+    color: var(--brown-color) !important;
+
+}
+
+.main-menu nav li a:before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    border-bottom: 2px solid #fff;
+    height: 2px;
+    top: 90%;
+    right: 15%;
+    background-color: #fff;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out 0s;
+}
+.main-menu nav .screen.z-index .menu li a:before {
+    content: unset;
+    position: unset;
+
+}
+.main-menu nav .screen.z-index .menu li a:hover,.main-menu nav .screen.z-index .menu li a:focus {
+    color: var(--brown-color) !important;
+
+}
+
+.main-menu nav li a:hover:before {
+    visibility: visible;
+    width: 80%;
+}
+
+.main-menu nav li a {
+    color: #fff !important;
+    margin-right: 3px;
+    font-size: 12px;
+    /* font-weight: 500; */
+}
+
+.list-admin__info {
+
+    padding: 18px 0;
+
+    margin-bottom: 0;
+}
+
+.item-admin-list-light a {
+    display: block;
+    background: #1f3579;
+    /* box-shadow: -5px 5px 16px rgba(0, 0, 0, 0.1); */
+    padding: 12px 20px;
+    border-radius: 8px;
+    position: relative;
+    color: var(--white-color);
+}
+
+.noti-btn a {
+    display: block;
+    background: var(--brown-color);
+    padding: 7px 11px !important;
+    border-radius: 10px;
+    color: var(--white-color);
+    position: relative;
+}
+
+.num {
+
+    bottom: 70%;
+
+    position: absolute;
+
+    right: 70%;
+
+    background: red;
+
+    border-radius: 50%;
+
+    padding: 3px 5px;
+
+    font-size: 8px;
+}
+
+.item-admin__content {
+    padding: 9px 9px 4px 26px !important;
+}
+
+.list-admin__info li {
+    vertical-align: middle;
+    /* margin: 2px !important; */
+    margin: 0 10px 0 10px !important;
+}
+
+.item-admin__content>img {
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+    top: 11px;
+}
+
+.item-admin__content>p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+header .header-content h1 {
+    color: var(--brown-color);
+    font-size: 43px;
+}
+
+.header-content {
+
+    margin-top: 15%;
+    min-height: 140px;
+}
+
+.header-content p {
+    margin-top: 20px !important;
+}
+
+.header-content p span:after {
+    content: "لتحفيظ القران الكريم وتفسيره";
+    animation: animate 20s;
+    /* border-right:2px solid white; */
+    font-size: 24px;
+    color: var(--white-color);
+    margin-top: 5px !important;
+}
+
+@keyframes animate {
+
+    0% {
+        content: "ل"
+    }
+
+    2% {
+        content: "لت"
+    }
+
+    4% {
+        content: "لتح"
+    }
+
+    6% {
+        content: "لتحف"
+    }
+
+    8% {
+        content: "لتحفي"
+    }
+
+    10% {
+        content: "لتحفيظ"
+    }
+
+    12% {
+        content: "لتحفي"
+    }
+
+    14% {
+        content: "لتحف"
+    }
+
+    16% {
+        content: "لتح"
+    }
+
+    18% {
+        content: "لت"
+    }
+
+    20% {
+        content: "ل"
+    }
+
+    22% {
+        content: ""
+    }
+
+    24% {
+        content: "ا"
+    }
+
+    26% {
+        content: "ال"
+    }
+
+    28% {
+        content: "الق"
+    }
+
+    30% {
+        content: "القر"
+    }
+
+    32% {
+        content: "القرا"
+    }
+
+    34% {
+        content: "القران"
+    }
+
+    36% {
+        content: "القرا"
+    }
+
+    38% {
+        content: "القر"
+    }
+
+    40% {
+        content: "الق"
+    }
+
+    42% {
+        content: "ال"
+    }
+
+    44% {
+        content: "ا"
+    }
+
+    46% {
+        content: ""
+    }
+
+    48% {
+        content: "ا"
+    }
+
+    50% {
+        content: "ال"
+    }
+
+    52% {
+        content: "الك"
+    }
+
+    54% {
+        content: "الكر"
+    }
+
+    56% {
+        content: "الكري"
+    }
+
+    58% {
+        content: "الكريم"
+    }
+
+    60% {
+        content: "الكري"
+    }
+
+    62% {
+        content: "الكر"
+    }
+
+    64% {
+        content: "الك"
+    }
+
+    66% {
+        content: "ال"
+    }
+
+    68% {
+        content: "ا"
+    }
+
+    70% {
+        content: ""
+    }
+
+    72% {
+        content: "و"
+    }
+
+    74% {
+        content: "وت"
+    }
+
+    76% {
+        content: "وتف"
+    }
+
+    78% {
+        content: "وتفس"
+    }
+
+    80% {
+        content: "وتفسي"
+    }
+
+    82% {
+        content: "وتفسير"
+    }
+
+    84% {
+        content: "وتفسيره"
+    }
+
+    86% {
+        content: "وتفسير"
+    }
+
+    88% {
+        content: "وتفسي"
+    }
+
+    90% {
+        content: "وتفس"
+    }
+
+    92% {
+        content: "وتف"
+    }
+
+    94% {
+        content: "وت"
+    }
+
+    96% {
+        content: "و"
+    }
+
+    98% {
+        content: ""
+    }
+
+    100% {
+        content: "لتحفيظ القران الكريم وتفسيره"
+    }
+}
+
+.new-account {
+    border-radius: 25px;
+    /* background-color: var(--brown-color); */
+    border: 1px solid;
+    border-color: var(--brown-color) !important;
+    width: 120px;
+    transition: ease-in-out 0.2s;
+    margin: auto;
+    text-align: center;
+    height: 40px;
+    font-size: 14px;
+}
+
+.new-account:focus,
+.new-account:hover {
+    color: #fff;
+    border-color: var(--brown-color);
+    box-shadow: 0px -3px 7px 0rem #d3a51d;
+    background-color: transparent;
+}
+
+.regist:focus,
+.regist:hover {
+
+    background-color: var(--brown-color)
+}
+
+.login {
+    background-color: var(--brown-color);
+}
+
+.regist {
+    background-color: transparent;
+}
+
+/*end header styling*/
+/*start about styling*/
+
+
+.bell {
+    height: 38px;
+
+    width: 40px;
+
+    box-shadow: 1px 2px 10px #999;
+
+
+    animation-name: col;
+
+    animation-duration: 2s;
+
+    animation-iteration-count: infinite;
+}
+
+@keyframes col {
+
+    0% {
+
+        transform: scale(1) translate(0, 0);
+
+    }
+
+    10% {
+
+        transform: scale(1.1) translate(0, 0);
+
+    }
+
+    75% {
+
+        transform: scale(1) translate(0, 0);
+
+    }
+
+    100% {
+
+        transform: scale(1) translate(0, 0);
+
+    }
+
+}
+
+/* about us part */
+
+.about_us_content p.about_us_content_description {
+    color: var(--secondary-color);
+    text-align: justify;
+    line-height: 25px;
+}
+
+
+/* courses */
+
+.courses_subtitle {
+    color: var(--secondary-color);
+    font-size: 20px;
+
+}
+
+.courses-box .p-port {
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.courses-text-description {
+    color: var(--secondary-color);
+    font-size: 14px;
+    padding-right: 30px;
+    display: inline-block;
+}
+
+.courses-box img {
+    transition: 1s;
+    width: 100%;
+}
+
+.portfolio-img {
+    border-radius: 9PX;
+}
+
+.courses-box img:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.courses-box a {
+    border-radius: 50%;
+    position: absolute;
+    bottom: 40%;
+    right: 8%;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    color: #1f3579;
+    padding: 2px 8px;
+    text-align: center;
+}
+
+.more-details {
+    border-radius: 50px;
+    font-size: 16px;
+    height: 60px;
+    padding-top: 16px;
+}
+
+.more-details:hover {
+    background: #d3a51d;
+}
+
+/* footer */
+.footer-contemt {
+    background: var(--main-bgcolor);
+    padding: 50px 50px 3px 50px;
+}
+
+.footer_about_us_content>p {
+    font-size: 16px;
+}
+
+p.footer_about_us_content_description.text-white {
+    font-size: 12px;
+    line-height: 27px;
+    text-align: justify;
+}
+
+.social-icons {
+    position: relative;
+}
+
+.social-icons ul {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    right: 83%;
+    transform: translate(50%, -50%);
+}
+
+.social-icons ul li {
+    list-style: none;
+}
+
+.social-icons ul li a {
+    width: 26px;
+    height: 26px;
+    background-color: var(--brown-color);
+    text-align: center;
+    line-height: 25px;
+    font-size: 13px;
+    margin: 0 5px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    z-index: 1;
+}
+
+.social-icons ul li a .icon {
+    position: relative;
+    color: #fff;
+    transition: .5s;
+    z-index: 3;
+}
+
+.social-icons ul li a:hover .icon {
+    color: #fff;
+    transform: rotateY(-360deg);
+}
+
+.social-icons ul li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    z-index: 2;
+}
+
+.social-icons ul li a:hover:before {
+    top: 0;
+}
+
+.social-icons ul li:nth-child(1) a:before {
+    background: #3A81A9;
+
+}
+
+.social-icons ul li:nth-child(3) a:before {
+    background: #4F6C9F;
+
+}
+
+.social-icons ul li:nth-child(5) a:before {
+    background: #4DB2E5;
+
+}
+
+.social-icons ul li:nth-child(4) a:before {
+    background: #A73176;
+
+}
+
+.footer-bootom>p {
+    color: var(--secondary-color);
+}
+
+
+
+
+
+/* registration page */
+.new-account.extra-border {
+    color: var(--brown-color);
+}
+
+.new-account.extra-border:hover {
+    color: var(--white-color);
+}
+
+.regist-bg {
+    background-image:
+        url(../imgs/bg2.png) !important;
+    /*  height:650px;
+    background-position: top right;
+    background-size: cover; */
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 54%;
+    left: 0;
+    top: 0;
+    bottom: 0%;
+    opacity: 0.2;
+}
+
+.registration-title {
+    color: var(--brown-color);
+    font-size: 56px;
+}
+
+.registration-subtitle {
+    font-size: 41px;
+}
+
+.input-group>.input-group-prepend>.btn {
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+
+}
+
+.code-number img {
+    position: absolute;
+    top: 50%;
+    z-index: 999;
+    left: 16px;
+}
+
+.nice-select {
+    width: 100%;
+}
+
+.code-number .nice-select {
+    padding-left: 45px;
+}
+
+.code-number .btn:hover {
+    background: none;
+    color: inherit;
+}
+
+.code-number .btn-outline-secondary.dropdown-toggle:focus {
+    box-shadow: none;
+    background: none;
+    border-color: none;
+    color: inherit;
+}
+
+.input-group>.form-control:not(:first-child) {
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.registration>p {
+    font-size: 19px;
+    color: rgba(0, 0, 0, 0.68);
+    width: 600px;
+    text-align: justify;
+}
+
+.first-part-regist>p,
+.second-part-regist>p {
+    font-size: 35px;
+}
+
+.registration-form .col-form-label {
+    font-size: 18px;
+}
+
+.register-input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #8692A6 !important;
+    font-size: 16px !important;
+}
+
+.form-control-lg.register-input {
+    height: 64px;
+}
+
+.nice-select.register-input {
+    color: #8692A6 !important;
+    font-size: 16px !important;
+}
+
+select.register-input {
+    color: #8692A6 !important;
+    font-size: 16px !important;
+
+}
+
+.register-input option:not(:first-of-type) {
+    color: black;
+}
+
+.register-input {
+    border-color: #8692A6;
+    font-size: 16px;
+}
+
+.register-input.form-control:focus,
+.register-input.form-control:hover {
+    color: #495057;
+    background-color: #fff;
+    border-color: var(--brown-color) !important;
+    box-shadow: 0px -1px 0px 0rem #ffc1074a;
+}
+
+.code-number:hover .register-input.form-control {
+    color: #495057;
+    background-color: #fff;
+    border-color: var(--brown-color) !important;
+    box-shadow: 0px -1px 0px 0rem #ffc1074a;
+}
+
+.registration-form .form-group {
+    margin-bottom: 0.5rem;
+}
+
+/* login page */
+
+.login-part>p {
+    font-size: 19px;
+    color: rgba(0, 0, 0, 0.68);
+    text-align: justify;
+}
+
+.login-part {
+    display: block;
+    position: relative;
+    padding: 0 300px 0 0;
+}
+
+.login-part>img {
+    width: 295px;
+    height: 350px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.regist-now p {
+    font-size: 23px;
+}
+
+.regist-now a {
+    color: var(--brown-color);
+    font-size: 23px;
+
+}
+
+.regist-now span {
+    color: var(--main-color);
+}
+
+/* custom checkbox*/
+.check-label {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: var(--brown-color);
+}
+
+/* Hide the browser's default checkbox */
+.check-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: var(--white-color);
+    border-color: var(--brown-color) !important;
+    border: 2px solid;
+    border-radius: 2px;
+}
+
+/* On mouse-over, add a grey background color */
+.check-label:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.check-label input:checked~.checkmark {
+    background-color: var(--brown-color);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.check-label input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.check-label .checkmark:after {
+    right: 4px;
+    top: 0;
+    width: 7px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 0 3px 3px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.forget-pass>a {
+    color: var(--brown-color);
+    font-size: 16px;
+}
+
+/* pass recovery */
+
+.pass-input.form-control{
+  transition: all 0.2s ease-in-out;
+}
+.pass-input.form-control:focus, .pass-input.form-control:hover {
+    border-color: #1f3579 !important;
+    box-shadow: 0px -1px 0px 0rem #1f357963;
+}
+
+/* user type page */
+
+
+.user-type-name {
+    color: var(--brown-color);
+    font-size: 20px;
+}
+
+.user-box p:last-child {
+    font-size: 14px;
+    color: #000;
+    animation: loadProgressBar 2s linear;
+
+
+}
+
+@keyframes loadProgressBar {
+
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+.user-box a {
+    display: block;
+    position: relative;
+    padding: 0 0px 0 120px;
+    width: 425px;
+    height: 108px;
+    box-shadow: 0px 2px 14px 1px rgba(0, 0, 0, 0.06);
+    border-radius: 6px;
+    transition: 1s;
+
+
+}
+
+.user-box a>img {
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    left: 50px;
+    top: 27%;
+}
+
+.user-box a:hover {
+    transform: scale(1.1, 1.1);
+}
+
+/* user list */
+
+.dropdown-menu.list-dropdown {
+    float: left;
+    text-align: left;
+}
+
+ul.dropdown-menu.list-dropdown {
+    width: 100%;
+    margin-top: 6px;
+    border-radius: 10px;
+    border: 0;
+    padding: 10px 5px;
+}
+
+.dropdown-menu.list-dropdown>li>a {
+    padding: 3px 5px !important;
+    display: block;
+    background: none;
+}
+
+span.list {
+    color: #4E565D;
+    font-size: 11px;
+    font-weight: bold;
+    padding-left: 0px;
+}
+
+#us3 {
+    min-height: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.map-location a {
+    top: 50px;
+    position: absolute;
+    right: 29px !important;
+    bottom: 18px;
+    color: #8692a6 !important;
+    font-size: 30px;
+    transition: all 0.2s ease-in-out;
+}
+
+.modal-header {
+    display: block;
+}
+
+.modal-header .close {
+    float: right;
+}
+ul.dropdown-menu.show li a.dropdown-item{
+    color: #000 !important;
+}
+ul.dropdown-menu li{
+    margin: 5px;
+}
+ul.dropdown-menu .dropdown-item:focus, ul.dropdown-menu .dropdown-item:hover {
+    background-color: #ffc107;
+    border-radius: 9px;
+}
+.map-hover:hover #address {
+    border-color: var(--brown-color) !important;
+    box-shadow: 0px -1px 0px 0rem #ffc1074a;
+}
+.map-hover:hover .map-location a i{
+color: var(--brown-color);
+}
+/*media query*/
+
+@media (max-width: 768px) {
+    .main-header {
+        height: 500px;
+    }
+
+    .row.col-reverse {
+        display: flex;
+        flex-flow: column-reverse;
+    }
+    .registration-title {
+        font-size: 40px;
+    }
+    .registration-subtitle {
+        font-size: 30px;
+    }
+    .social-icons ul {
+
+top: 0;
+
+margin-top: 5px;
+
+right: 87%;
+
+}
+
+    .collapse:not(.show).s-screen-menu {
+        display: none !important
+    }
+
+    .s-screen-btn {
+        margin-right: 20px;
+        border-color: #000 !important;
+    }
+
+    .regist {
+        margin-top: 20px;
+    }
+
+    .footer-contemt {
+        padding: 25px 20px 6px 20px;
+    }
+
+    .login-part>img {
+        margin: auto;
+        position: relative;
+        display: block;
+        text-align: center;
+        width: 200px;
+        height: 200px;
+
+    }
+
+    .row.pt-0.pr-5.pl-5.pb-5 {
+        padding: 0 0 0 0;
+        padding-top: 5px !important;
+        padding-right: 5px !important;
+        padding-left: 5px !important;
+    }
+
+    .login-part {
+
+        padding: 0;
+    }
+
+    .mt-70,
+    .mt-50 {
+        margin-top: 20px;
+    }
+
+    .pt-5,
+    .pl-5,
+    .pr-5 {
+        padding-top: 20px !important;
+    }
+
+    .footer-bootom.mt-50 {
+        margin-top: 30px;
+        margin-bottom: 25px;
+    }
+
+    .registration>p {
+
+        width: auto;
+    }
+
+    .regist-bg {
+
+        right: 0;
+
+        opacity: 0.4;
+    }
+
+    .user-box a {
+        padding: 0 0px 0 108px;
+        width: 100%;
+
+    }
+
+
+    .user-box a>img {
+        left: 30px;
+    }
+}
